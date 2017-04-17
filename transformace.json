@@ -1,0 +1,52 @@
+
+    [
+	
+	"nastaveni": {
+            
+		"Hrac": {
+			"Uzivatel": "Martina123",
+			"Obtiznost": "Pokrocily",	
+                        }
+            ,
+            
+            
+		"Obecne": {
+			"Rezim": "Celá obrazovka",
+			"Jazyk": "Angličtina",
+                        "Titulky": "true",
+                        "Jazyk titulku": "Čeština",
+                        "Ukazky": "true",
+                        "Automaticke ukladani": "false",	
+                        }
+            ,
+            
+            
+		"Grafika": {
+			"Rozliseni": "1920x1080",
+			"Jas": "",
+                        "Kontrast": "",
+                        "Kvalita textur": "Vysoká",
+                        "Nasviceni prostredi": "Střední",
+                        "Kvalita stinu": "Střední",
+                        "Kvality vody": "Nízká",
+                        "Kvalita prostredí": "Střední",	
+                        }
+            ,  
+            
+            
+		"Zvuk": {
+			"Celkova hlasitost": "Střední",
+			"Hudba": "",
+                        "Kontrast": "",	
+                        }
+            ,
+            
+            
+		"Ovladani": {
+			"Vstup": "Klávesnice a myš",
+			"Citlivost": "",	
+                        }
+            ,
+         
+      ]      
+    

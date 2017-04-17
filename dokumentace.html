@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bartošová</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>   
+        <h1>Konfigurace počítačové hry</h1>    
+        <header>  
+          <nav>
+              <p>_______________________________________________</p>
+              <h2 id="navigace">Menu</h2>
+          <ul>
+            <li><a href="#uvod">Úvod</a></li>
+            <li><a href="#metodika">Metodika</a></li>
+            <li><a href="#elementyAtributy">Popis elementů a atributů</a></li>
+            <li><a href="#transformace">Popis transformace</a></li>    
+            <li><a href="#zaver">Závěr</a></li>  
+          </ul>
+              <p>_______________________________________________</p>
+          </nav>
+        </header>
+        
+        <main>     
+            <section id="uvod">
+                <h2>Úvod</h2>  
+                <p>Téma semestrální práce z předmětu Značkovací jazyky je Konfigurace neboli nastavení aplikace, tedy konkrétně smyšlené počítačové hry. Konfigurační soubor obsahuje jen základní nastavení hry - 
+                    obecné nastavení, nastavení grafiky, zvuku a ovládání.</p>
+                <p>Obsahem práce je:</p>
+                <ul>
+                    <li>XML soubor</li>
+                    <li>XML schéma</li>
+                    <li>XSLT soubor</li>
+                    <li>Transformace do JSON</li>
+                    <li>Tato dokumentace v HTML</li>
+                </ul>
+            </section>
+            
+            <section id="metodika">
+                <h2>Metodika</h2>
+                <p>Celá semestrální práce byla tvořena ručně bez konvertorů v prostředí NetBeans. První jsem vytvořila soubor XML, který jsem následně přepsala do XSD a validitu jsem zkontrolovala pomocí NetBeans.
+                Poté jsem vytvořila soubor XSLT a spolu s XML jsem ho transformovala do JSON. Jako poslední jsem vytvořila dokumentaci v HTML, jejíž validitu jsem zkontrolovala validátorem W3C.</p>
+                <article>
+                    <h3>Použité aplikace</h3>
+                    <p>Pro tvorbu semestrální práce jsem využila vývojového prostředí NetBeans IDE 8.2. a prohlížeče Google Chrome a Microsoft Edge.</p>
+                </article>
+                <article>
+                    <h3>Použité webové stránky</h3>
+                    <p>Jako podporu jsem použila prezentace na Moodlu z předmětu Značkovací jazyky a webovou stránku <a href="https://www.w3schools.com">w3schools</a>. Pro validaci HTML souboru jsem využila stránky
+                        <a href="https://validator.w3.org/">Validator W3C.</a></p>
+                </article>
+            </section>
+            
+            <section id="elementyAtributy">
+                <h2>Popis elementů a atributů</h2>  
+                <table border="1" >
+                    <tr>
+                        <th>Název</th>
+                        <th>Popis</th>
+                        <th>Omezení</th>
+                    </tr>
+                    <tr>
+                        <td>uzivatel</td>
+                        <td>Jméno hráče.</td>
+                        <td>String řetězec</td>
+                    </tr>
+                    <tr>
+                        <td>obtiznost</td>
+                        <td>Uživatelem vybraná obtížnost.</td>
+                        <td>Zacatecnik, Pokrocily, Zkuseny.</td>
+                    </tr>
+                    <tr>
+                        <td>rezim</td>
+                        <td>Vyber režimu zobrazení.</td>
+                        <td>Okno, Celá obrazovka</td>
+                    </tr>
+                    <tr>
+                        <td>jazyk</td>
+                        <td>Jazyk mluvy.</td>
+                        <td>Čeština, Angličtina, Němčina</td>
+                    </tr>
+                    <tr>
+                        <td>titulky</td>
+                        <td>Nastavení zapnutí/vypnutí titulků</td>
+                        <td>Boolean omezení true/false</td>
+                    </tr>
+                    <tr>
+                        <td>jazykTitulky</td>
+                        <td>Jazyk titulků.</td>
+                        <td>Čeština, Angličtina, Němčina</td>
+                    </tr>
+                    <tr>
+                        <td>ukazky</td>
+                        <td>Nastavení zapnutí/vypnutí přehrávání ukázek.</td>
+                        <td>Boolean omezení true/false</td>
+                    </tr>
+                    <tr>
+                        <td>automatickeUkladani</td>
+                        <td>Nastavení zapnutí/vyypnutí automatického ukládání hry.</td>
+                        <td>Boolean omezení true/false</td>
+                    </tr>
+                    <tr>
+                        <td>rozliseni</td>
+                        <td>Rozliseni hry.</td>
+                        <td>1366×768, 1600×1200, 1920×1080</td>
+                    </tr>
+                    <tr>
+                        <td>jas</td>
+                        <td>Nastavení hodnoty jasu.</td>
+                        <td>0-100</td>
+                    </tr>
+                    <tr>
+                        <td>kontrast</td>
+                        <td>Nastavení hodnoty kontrastu.</td>
+                        <td>0-100</td>
+                    </tr>
+                    <tr>
+                        <td>kvalitaTextur</td>
+                        <td>Možnost kvality zobrazení textur.</td>
+                        <td>Nízká, Střední, Vysoká</td>
+                    </tr>
+                    <tr>
+                        <td>nasviceniProstredi</td>
+                        <td>Nastavení kvality nasvícení prostředí.</td>
+                        <td>Nízká, Střední, Vysoká</td>
+                    </tr>
+                    <tr>
+                        <td>kvalitaStinu</td>
+                        <td>Možnost kvality zobrazení stínů.</td>
+                        <td>Nízká, Střední, Vysoká</td>
+                    </tr>
+                    <tr>
+                        <td>kvalityVody</td>
+                        <td>Možnost kvality zobrazení vody.</td>
+                        <td>Nízká, Střední, Vysoká</td>
+                    </tr>
+                    <tr>
+                        <td>kvalitaProstredí</td>
+                        <td>Možnost kvality zobrazení prostředí.</td>
+                        <td>Nízká, Střední, Vysoká</td>                        
+                    </tr>
+                    <tr>
+                        <td>celkovaHlasitost</td>
+                        <td>Celková hlasitost hudby a zvuků.</td>
+                        <td>Nízká, Střední, Vysoká</td>
+                    </tr>
+                    <tr>
+                        <td>hudba</td>
+                        <td>Nastavení hlasitosti hudby.</td>
+                        <td>0-100</td>
+                    </tr>
+                    <tr>
+                        <td>zvuky</td>
+                        <td>Nastavení hlasitosti zvuků</td>
+                        <td>0-100</td>
+                    </tr>
+                    <tr>
+                        <td>vstup</td>
+                        <td>Výběr ovládání hry.</td>
+                        <td>Klávesnice a myš, Jiné zařízení</td>
+                    </tr>
+                    <tr>
+                        <td>citlivost</td>
+                        <td>Nastavení hodnoty citlivosti ovládání.</td>
+                        <td>0-100</td>
+                    </tr>
+                    
+                </table>
+            </section>
+            
+            <section id="transformace">
+                <h2>Popis transformace</h2>    
+                <p>Transformace do JSON (JavaScript Object Notation) je provedena pomocí XML a XSLT souboru. Je zde použitý cyklus for-each, který vybere a odešle informace o hráči a nastavení hry.</p>
+            </section> 
+            
+            <section id="zaver">
+                <h2>Závěr</h2>
+                <p>Vypracování projektu bylo z hlediska praxe docela zdlouhavé ale velmi poučné .</p>
+            </section>
+
+        </main>
+        
+        <footer>
+            <p>_______________________________________________</p>
+            <p>&copy; 2017 Copyright Martina Bartošová | Značkovací jazyky </p>
+        </footer> 
+    </body>
+    
+    
+    
+</html>
