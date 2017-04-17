@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nastaveni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xml_schema.xsd">
+    <hrac>
+        <uzivatel>Martina123</uzivatel>
+        <obtiznost>Pokrocily</obtiznost>
+    </hrac>
+    
+    <obecne>
+        <rezim>Celá obrazovka</rezim>
+        <jazyk>Angličtina</jazyk>
+        <titulky hodnota="true"/>
+        <jazykTitulky>Čeština</jazykTitulky>
+        <ukazky hodnota="true"/>
+        <automatickeUkladani hodnota="false"/>
+    </obecne>
+    
+    <grafika>
+        <rozliseni>1920x1080</rozliseni>
+        <jas hodnota="40"/>
+        <kontrast hodnota="50"/>
+        <kvalitaTextur>Vysoká</kvalitaTextur>
+        <nasviceniProstredi>Střední</nasviceniProstredi>
+        <kvalitaStinu>Střední</kvalitaStinu>
+        <kvalityVody>Nízká</kvalityVody>
+        <kvalitaProstredí>Střední</kvalitaProstredí>
+    </grafika>
+    
+    <zvuk>
+        <celkovaHlasitost>Střední</celkovaHlasitost>
+        <hudba hodnota="67"/>
+        <zvuky hodnota="87"/>
+    </zvuk>
+    
+    <ovladani>
+        <vstup>Klávesnice a myš</vstup>
+        <citlivost hodnota="20"/>     
+    </ovladani>
+
+</nastaveni>

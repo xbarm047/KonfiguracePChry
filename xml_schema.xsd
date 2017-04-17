@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="nastaveni">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="hrac">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="uzivatel" />
+                            <xs:element name="obtiznost">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Zacatecnik"/>
+					<xs:enumeration value="Pokrocily"/>
+					<xs:enumeration value="Zkuseny"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="obecne">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="rezim">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Celá obrazovka"/>
+					<xs:enumeration value="Okno"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                            <xs:element name="jazyk">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Èeština"/>
+					<xs:enumeration value="Angliètina"/>
+					<xs:enumeration value="Nìmèina"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                            <xs:element name="titulky">
+				<xs:complexType>
+                                    <xs:attribute type="xs:boolean" name="hodnota"/>
+				</xs:complexType>
+                            </xs:element>
+                            <xs:element name="jazykTitulky">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Èeština"/>
+					<xs:enumeration value="Angliètina"/>
+					<xs:enumeration value="Nìmèina"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ukazky">
+				<xs:complexType>
+                                    <xs:attribute type="xs:boolean" name="hodnota"/>
+				</xs:complexType>
+                            </xs:element>
+                            <xs:element name="automatickeUkladani">
+				<xs:complexType>
+                                    <xs:attribute type="xs:boolean" name="hodnota"/>
+				</xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>    
+                </xs:element>
+                
+                <xs:element name="grafika">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="rozliseni">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="1366×768"/>
+					<xs:enumeration value="1600×1200"/>
+					<xs:enumeration value="1920×1080"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                            <xs:element name="jas">
+                                <xs:complexType>
+                                    <xs:attribute name="hodnota" default="50">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:nonNegativeInteger">
+						<xs:maxInclusive value="100"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+				</xs:complexType>
+                            </xs:element>
+                            <xs:element name="kontrast">
+                                <xs:complexType>
+                                    <xs:attribute name="hodnota" default="50">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:nonNegativeInteger">
+						<xs:maxInclusive value="100"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+				</xs:complexType>
+                            </xs:element>  
+                            <xs:element name="kvalitaTextur">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Nízká"/>
+					<xs:enumeration value="Støední"/>
+					<xs:enumeration value="Vysoká"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>    
+                            <xs:element name="nasviceniProstredi">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Nízká"/>
+					<xs:enumeration value="Støední"/>
+					<xs:enumeration value="Vysoká"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element> 
+                            <xs:element name="kvalitaStinu">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Nízká"/>
+					<xs:enumeration value="Støední"/>
+					<xs:enumeration value="Vysoká"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                            <xs:element name="kvalityVody">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Nízká"/>
+					<xs:enumeration value="Støední"/>
+					<xs:enumeration value="Vysoká"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                            <xs:element name="kvalitaProstredí">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Nízká"/>
+					<xs:enumeration value="Støední"/>
+					<xs:enumeration value="Vysoká"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>                              
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="zvuk">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="celkovaHlasitost">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Nízká"/>
+					<xs:enumeration value="Støední"/>
+					<xs:enumeration value="Vysoká"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                            <xs:element name="hudba">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="hodnota" default="80">
+                                            <xs:simpleType>
+						<xs:restriction base="xs:nonNegativeInteger">
+                                                    <xs:maxInclusive value="100"/>
+						</xs:restriction>
+                                            </xs:simpleType>
+					</xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="zvuky">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="hodnota" default="80">
+                                            <xs:simpleType>
+						<xs:restriction base="xs:nonNegativeInteger">
+                                                    <xs:maxInclusive value="100"/>
+						</xs:restriction>
+                                            </xs:simpleType>
+					</xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="ovladani">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="vstup">
+				<xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="Klávesnice a myš"/>
+					<xs:enumeration value="Jiné zaøízení"/>
+                                    </xs:restriction>
+				</xs:simpleType>
+                            </xs:element>
+                            <xs:element name="citlivost">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="hodnota" default="30">
+                                            <xs:simpleType>
+						<xs:restriction base="xs:nonNegativeInteger">
+                                                    <xs:maxInclusive value="100"/>
+						</xs:restriction>
+                                            </xs:simpleType>
+					</xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element> 
+    
+</xs:schema>
